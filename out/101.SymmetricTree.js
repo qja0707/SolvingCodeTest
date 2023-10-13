@@ -12,11 +12,11 @@ function isSymmetric(root) {
     const rightArr = [];
     leftVisit(leftTree, leftArr);
     rightVisit(rightTree, rightArr);
-    leftArr.forEach((v, i) => {
-        if (v !== rightArr[i]) {
+    for (let i = 0; i < leftArr.length; i++) {
+        if (leftArr[i] !== rightArr[i]) {
             return false;
         }
-    });
+    }
     return true;
 }
 ;
